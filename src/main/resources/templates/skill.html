@@ -1,0 +1,92 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search</title>
+	<link rel="stylesheet" th:href="@{/css/skillStyle.css}">
+	<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css}" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script th:src="@{/js/skillScript.js}" defer ></script> 
+	</head>
+	<body>
+	    <div class="container">
+	        <div class="container1">
+	        <div class="logo-container">
+	            <img id="logo" th:src="@{/css/Resume Generator_transparent1.png}">
+	            </div>
+	        <div class="do-list">
+	            <div class="check-container"><input class="to-do-checkbox" type="checkbox" id="personalDetails" name="personalDetails" checked><label for="personalDetails">Personal Details</label></div>
+	            <div class="check-container"><input class="to-do-checkbox" type="checkbox" id="education" name="education" checked><label for="education">Education</label></div>
+	            <div class="check-container"><input class="to-do-checkbox" type="checkbox" name="experience" checked><label for="experience" checked>Personal Experience</label></div>
+	            <div class="check-container"><input class="to-do-checkbox" type="checkbox" id="skillCheck" name="skills"><label for="skills">Skills</label></div>
+	            <div class="check-container"><input class="to-do-checkbox" type="checkbox" name="summary"><label for="summary">Summary</label></div>
+	            <div class="check-container"><input class="to-do-checkbox" type="checkbox" name="finalize"><label for="finalize">Finalize</label></div>
+	        </div>
+	        <div class="bar-container">
+	            <progress id="file" value="70" max="100" ></progress>
+	        </div>
+	        <div class="copyright">
+	            <p id="copyright-para">© 2024 Works Limited. All Rights Reserved</p>
+	           </div>
+	    </div>
+	        <div class="container2">
+	            <div class="headings">
+	            <div class="heading">
+	                <h1 class="heading">What skills would you like to highlight?</h1>
+	            </div>
+	            <div class="sub-heading">
+	                <h3 class="sub-heading">Improve your cv with your skills.</h3>
+	           </div></div>
+
+
+	    <div id="searchContainer "class="search-container">
+	        <div class="search-box">
+				<div class="search">
+				            <input type="text" id="jobSearch" placeholder="Search skills..." oninput="searchJobs()">
+				            <button class="icon"> <i class="fa-solid fa-magnifying-glass"></i></button>
+				            </div><div id="resultContainer" class="result-container"></div>
+				<ol id="skill"></ol>
+	        </div>
+	       
+	    </div>
+	    <div class="choice">
+	        <button id="choice-btn">Next: Resume</button>
+	    </div>
+	</div>
+	</div>
+	    
+	
+
+	<script>
+	        async function searchJobs() {
+	            const query = document.getElementById('jobSearch').value;
+	            if (query.length < 1) {
+	                document.getElementById('resultContainer').innerHTML = '';
+	                return;
+	            }
+
+	            const response = await fetch(`/searchJobs?query=${query}`);
+	            const results = await response.json();
+
+	            const resultContainer = document.getElementById('resultContainer');
+	            resultContainer.innerHTML = '';
+
+	            results.forEach(job => {
+	                const div = document.createElement('div');
+	                div.classList.add('result-item');
+	                div.textContent = job.title;
+	                div.addEventListener('click', () => selectJob(job.title));
+	                resultContainer.appendChild(div);
+	            });
+	        }
+
+	        function selectJob(title) {
+	            document.getElementById('jobSearch').value = title;
+				document.getElementById('resultContainer').innerHTML = '';
+				const skill1 = document.createElement('li');
+				skill1.innerText=title;
+				document.getElementById('skill').appendChild(skill1);
+	        }
+	    </script>
+	</body>
+	</html>

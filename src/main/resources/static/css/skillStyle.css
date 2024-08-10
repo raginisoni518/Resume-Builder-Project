@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.container{
+    height:100%;
+    width:100vw;
+    display: flex;
+    justify-content: space-between;
+}
+.container1{
+    height:700px;;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color:#023047;
+    color:#F1F6FB;
+    position:fixed;
+}
+.logo-container{
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bar-container{
+    height:20% ;
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#file{
+    height:2rem;
+}
+#logo{
+    padding-top: 1rem;
+    height:80px;
+    width:130px;
+    object-fit: cover;
+}
+.choice-btn{
+    height:3rem;
+    width: 10rem;
+    background-color: white;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+button:hover{
+    color:#fff;
+    background-color: rgb(137, 137, 233);
+    cursor: pointer;
+    border-color:#0C1986;
+}
+.do-list{
+    margin-top: 1rem;
+    height:35%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.check-container{
+	height: 2rem;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+}
+.copyright{
+    height:10%;
+    display: flex;
+    flex-direction: column;
+}
+#copyright-para{
+    padding-left: 1rem;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    color: #F1F6FB;
+    font-weight: 500;
+}
+
+.container2{
+   width:60vw;
+   margin-left: 21vw;
+}
+.heading{
+    
+    font-family: sans-serif;
+    font-weight:bold;
+}
+.sub-heading{
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #46464E;
+}
+.heading3{
+    font-size:0.9rem;
+    font-weight: 500;
+    color: #46464E;
+    font-family: sans-serif;
+    margin-top: 1.5rem;
+}
+input[type="text"]{
+    transition-duration: 0.5ms;
+}
+input[type="text"]:focus{
+    border:2px solid #023047;
+}
+.search-container {
+    margin-top: 1.7rem;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    
+    height: 50vh;
+  
+}
+
+.search-box {
+    margin-left: 3rem;
+    margin-top: 3rem;
+    width: 300px;
+    position: relative;
+}
+
+.search-box input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  
+    font-family: sans-serif;
+   
+}
+
+.result-container {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    background: white;
+   
+    border-radius: 5px;
+   
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.result-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.result-item:hover {
+    background-color: #f1f1f1;
+}
+input{
+    height:3.4rem;
+    
+    border:1px solid black;
+    color:#46464E;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+.search {
+    width:600px;
+    height:40px;
+    display:flex;
+    justify-content: center;
+}
+#jobSearch{
+    width:80%;
+    font-size: 1rem;
+}
+.icon{
+    height:3.4rem;
+    width:10%;
+    background-color: rgb(253, 209, 78);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-color :rgb(253, 209, 78);
+    font-size:1.2rem;
+}
+.choice{
+    margin-top: 40px;
+    height: 6rem;
+    width: 380px;
+    margin-left: 600px;
+}
+#choice-btn{
+    height:4rem;
+    width:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: rgb(253, 209, 78);
+    border-radius: 50px;
+}
+.hide{
+    visibility: hidden;
+}
+#choice-btn:hover{
+    border:3px dashed #0C1986;
+    background-color: rgb(253, 209, 78);
+    color: black;
+}
+.headings{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap:1.2rem;
+    margin-bottom: 2rem;
+}
+#skill{
+	height:80px;
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	gap:1rem;
+	font-size: 1rem;
+	font-family: sans-serif;
+}

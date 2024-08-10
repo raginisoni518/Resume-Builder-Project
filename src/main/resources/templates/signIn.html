@@ -1,0 +1,28 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+    <link rel="stylesheet" href="" th:href="@{/css/signinStyle.css}">
+	<script th:src="@{/js/signInScript.js}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img id="logo" th:src="@{/css/Resume Generator_transparent.png}" >
+            <h2 class="heading">Sign-in to Your Account</h2>
+        </div>
+        <div class="form-container">
+            <input class="signin-input" type="text" id="email"  name="email" placeholder=" Email Address">
+            <input class="signin-input" type="password" id="password" name="password" placeholder=" Password (Must be between 6-16 character)" minlength="6" maxlength="17">
+            <input id="sign-in-btn" type="submit" value="SIGN IN">
+            <p class="cond-para">By clicking on Sign In you also agree to our Terms of Use and Privacy Policy</p>
+        </div>
+         <div class="sign-up">
+            <p id="para1">Don't have an account? <a href="http://localhost:9091/resume/signUp"> Sign up</a> </p>
+         </div>
+
+    </div>
+</body>
+</html>

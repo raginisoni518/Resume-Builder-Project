@@ -1,0 +1,60 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="" th:href="@{/css/homeStyle.css}">
+</head>
+<body>
+    <header>
+        <div class="heading">
+            <img id="logo" th:src="@{/css/Resume Generator_transparent.png}" >
+        </div>
+        <div class="account">
+            <a th:href="@{http://localhost:9091/resume/signIn}" target="_blank"><button class="my-account" th:onclick="logMovies()">My Account</button></a>
+        </div>
+    </header>
+    <div class="display-container">
+        <div class="content-container">
+            <h3 class="sub-heading">Fast.Easy.Effective.</h3>
+            <h1 class="content-heading">The Best CV Maker Online</h1>
+            <p id="intro">If a sheet of paper represents your entire work life, personality, and skills, it better be a pretty amazing piece of paper — Let this website do the heavy lifting</p>
+             <a th:href="@{http://localhost:9091/resume/signIn}" target="_blank"><button id="create-button">Create your CV now</button></a>a>
+        </div>
+        <div class="resume-image">
+            <img id="demo" th:src="@{/css/Screenshot 2024-06-26 222055.png}">
+        </div>
+    </div>
+    <div class="as-container">
+        <div class="container1">
+            <h6 id="label">As seen in*</h6>
+        </div>
+        <div class="container2">
+            <img class="brand" th:src="@{/css/warm-yellow-partners-theguardian.png}" >
+            <img class="brand" th:src="@{/css/warm-yellow-partners-huffpost.png}" >
+            <img class="brand" th:src="@{/css/warm-yellow-partners-lifehacker.png}" >
+            <img class="brand" th:src="@{/css/warm-yellow-partners-business.png}" >
+            <img class="brand" th:src="@{/css/warm-yellow-partners-financialtimes.png}" >
+            <img class="brand" th:src="@{/css/warm-yellow-partners-forbes.png}" >
+        </div>
+    </div>
+    <div class="footer">
+        <div class="trademark-container">
+            <div class="trademark">
+                <p id="trademark-para">*The names and logos of the companies referred to above are all trademarks of their respective holders. Unless specifically stated otherwise, such references are not intended to imply any affiliation or association with Us</p>
+            </div>
+            <div class="contact">
+                Call Us <a href="">912-053-3722</a>
+            </div></div>
+            <div class="about-us">
+                <p id="about">About  |  Accessibility  |  Contact  |  Privacy Policy  |  Terms of Service</p>
+            </div>
+            <hr>
+           <div class="copyright">
+            <p id="copyright-para">© 2024 Works Limited. All Rights Reserved</p>
+           </div>
+    </div>
+	<script type="text/javascript" th:src="@{/js/homeScript.js}"></script>
+</body>
+</html>

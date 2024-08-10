@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.resume {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+header p {
+    margin: 5px 0;
+    color: #34495e;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #2c3e50;
+    color: #2c3e50;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #34495e;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: url('bullet.png') no-repeat left center;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.summary p {
+    font-style: italic;
+}
+
+
+.skills-sec ul li {
+    background: none;
+}
+.skills-sec ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+}
+
+.skills-sec li {
+    display: block; /* Makes each item take up the full width */
+    margin-bottom: 5px; /* Adds some space between items */
+}
+.certifications ul li {
+    background: none;
+}
+header h2.profession {
+    margin: 5px 0 10px;
+    font-size: 1.5em;
+    color: #34495e;
+    border-bottom: none;
+}
+
+
+.contact-info {
+    margin-bottom: 20px;
+    
+}
+h2 {
+    border-bottom: 2px solid #333; /* Dark gray border */
+    padding-bottom: 5px; /* Space between the text and the border */
+    margin-bottom: 15px; /* Space below the heading */
+}
+#contact {
+    margin: 5px 0;
+    padding: 0%;
+    display: flex;
+    gap:0.5rem;
+    justify-content: center;
+    margin-left: 0;
+    font-weight: 600;
+}
+.skills {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .experience p {
+    word-wrap: break-word; /* Forces long words to break and wrap onto the next line */
+    overflow-wrap: break-word; /* Ensures long words are broken down */
+    white-space: pre-wrap; /* Preserves white spaces and breaks lines where necessary */
+}
+.skill-item {
+    flex: 1 1 30%;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+   
+    text-align: center;
+     }
+.experience-cont { 
+     margin: 5px 0;
+    padding: 0%;
+    display: flex;
+    gap:0.5rem;
+    justify-content: start;
+    margin-left: 0;
+}
+#title,#purpose,#location{
+    color:#2c3e50;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+#choice-btn:hover{
+	cursor: pointer;
+    border:3px dashed #0C1986;
+    background-color: rgb(253, 209, 78);
+    color: black;
+}
+.choice{
+    margin-top: 20px;
+    height: 6rem;
+   display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#choice-btn{
+    height:4rem;
+    width:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: rgb(253, 209, 78);
+    border: none;
+    border-radius: 50px;
+}

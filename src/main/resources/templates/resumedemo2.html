@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Donna Robbins Resume</title>
+	<link rel="stylesheet" th:href="@{/css/resumeStyle.css}">
+	<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js}"></script>
+
+</head>
+
+<body>
+	<div class="resume" id="resume">
+		<header>
+			<h1 th:text="${user.firstName} + ' ' + ${user.lastName}">Donna Robbins</h1>
+			<h2 th:text="${user.profession}">Software Engineer</h2>
+			<div class="contact-info">
+				<div id="contact">
+					<div id="address" th:text="${user.city}+' '+${user.country}+' '+${user.pin}+' | '">Kanpur, INDIA
+						208012 | </div>
+					<div id="phoneNumber" th:text="${user.phone}+' |  '">9120533722 | </div>
+					<div id="email" th:text="${user.email}">raginisoni518@gmail.com</div>
+				</div>
+			</div>
+		</header>
+		<section class="summary">
+			<p>Highly-motivated employee with desire to take on new challenges. Strong work ethic, adaptability, and
+				exceptional interpersonal skills. Adept at working effectively unsupervised and quickly mastering new
+				skills. Focused on further developing acquired skills by learning from top teams and completing
+				development projects. Knowledgeable about mobile and desktop platforms.</p>
+		</section>
+		<section class="education">
+			<h2>Education</h2>
+			<h3 th:text="${user.schoolName}">Bachelor of Science in Accounting, Minor in Business Administration |
+				Bellows College</h3>
+			<p th:text="${user.schoolLocation}">June 20XX</p>
+			<ul>
+				<li th:text="${user.degree}">Distinguished member of university’s Accounting Society</li>
+				<li th:text="'CGPA:'+${user.cgpa}">GPA: 3.8</li>
+			</ul>
+		</section>
+		<section class="experience">
+			<h2>Experience</h2>
+			<div class="experience-cont">
+				<div id="title" th:text="${user.title}+' | '">Accountant | </div>
+				<div id="purpose" th:text="${user.purpose}+' | '">Trey Research | </div>
+				<div id="location" th:text="${user.projectLocation}"> San Francisco, CA</div>
+			</div>
+			<p th:text="${user.startMonth}+'/'+${user.startYear}+' - '+${user.endMonth}+'/'+${user.endYear}">20XX – Present</p>
+			<p th:text="${user.description}">Working in a mid-sized public accounting firm to provide professional accounting services for individuals
+				and business clients. Provide full range of services, include income tax preparation, audit support,
+				preparation of financial statements, pro forma budgeting, general ledger accounting, and bank
+				reconciliation.</p>
+
+		</section>
+		<section class="certifications">
+			<h2>Certifications</h2>
+			<ul>
+			                <li>Certified Public Accountant (CPA)</li>
+			                <li>Certified Management Accountant (CMA)</li>
+			                <li>Certified Financial Planner (CFP)</li>
+			            </ul>
+		</section>
+		<section class="skills-sec">
+			<h2>Skills</h2>
+			<div class="skills">
+							<ul class="skills">
+									 <li class="skill-item" th:each="skill : ${user.jobs}" th:text="${skill.jobSearch}">HTML</div>
+							</ul>
+						</div>
+		</section>
+	</div>
+	<div class="choice">
+					<button id="choice-btn">Generate Pdf</button>
+				</div>
+				<script>
+				        document.getElementById('choice-btn').addEventListener('click', function () {
+				            var element = document.getElementById('resume');
+				            html2pdf(element, {
+				                margin:       0.5,
+				                filename:     'resume.pdf',
+				                image:        { type: 'jpeg', quality: 0.98 },
+				                html2canvas:  { scale: 2, logging: true, dpi: 192, letterRendering: true },
+				                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+				            });
+				        });
+				    </script>
+</body>
+
+</html>

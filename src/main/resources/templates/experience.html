@@ -1,0 +1,213 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Experience</title>
+	<link rel="stylesheet" th:href="@{/css/experienceStyle.css}">
+	<script th:src="@{/js/experienceScript.js}" defer></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="container1">
+			<div class="logo-container">
+				<img id="logo" th:src="@{/css/Resume Generator_transparent1.png}">
+			</div>
+			<div class="do-list">
+				<div class="check-container"><input class="to-do-checkbox" type="checkbox" id="personalDetails"
+						name="personalDetails" checked><label for="personalDetails">Personal Details</label></div>
+				<div class="check-container"><input class="to-do-checkbox" type="checkbox" id="education"
+						name="education" checked><label for="education">Education</label></div>
+				<div class="check-container"><input class="to-do-checkbox" type="checkbox" id="experience"
+						name="experience"><label for="experience">Personal Experience</label></div>
+				<div class="check-container"><input class="to-do-checkbox" type="checkbox" name="skills"><label
+						for="skills">Skills</label></div>
+				<div class="check-container"><input class="to-do-checkbox" type="checkbox" name="summary"><label
+						for="summary">Summary</label></div>
+				<div class="check-container"><input class="to-do-checkbox" type="checkbox" name="finalize"><label
+						for="finalize">Finalize</label></div>
+			</div>
+			<div class="bar-container">
+				<progress id="file" value="45" max="100"></progress>
+			</div>
+			<div class="copyright">
+				<p id="copyright-para">© 2024 Works Limited. All Rights Reserved</p>
+			</div>
+		</div>
+		<div class="container2">
+			<div class="headings">
+				<div class="heading">
+					<h1 class="heading">Tell us about your experience</h1>
+				</div>
+				<div class="sub-heading">
+					<h3 class="sub-heading">Start with your most recent experience and work backward.</h3>
+				</div>
+				<h5 class="heading3">* indicates a required field</h5>
+			</div>
+			<div class="form-container">
+				<div class="project">
+					<div class="project-name">
+						<label for="title">What Was Your Title? *</label>
+						<input type="text" id="title" name="title"
+							placeholder=" e.g. Similar to a job that best describe your work" />
+					</div>
+					<div class="project-details">
+						<label for="purpose">Who Did You Do This For? *</label>
+						<input type="text" id="purpose" name="purpose"
+							placeholder=" e.g. Person, organization, company or family business" />
+					</div>
+				</div>
+				<div class="location">
+					<div class="location-name">
+						<label for="projectLocation">Location*</label>
+						<input type="text" id="projectLocation" name="projectLocation"
+							placeholder=" e.g. Delhi,India" />
+					</div>
+					<div class="remote-btn">
+						<input type="checkbox" id="remote" name="remote">
+						<label for="remote">remote</label>
+					</div>
+				</div>
+				<div class="description-container">
+					<div class="description">
+						<label for="description">Describe the project*</label>
+						<textarea id="description" name="description" rows="7" cols="87"
+							placeholder=" description....." max="230"></textarea>
+					</div>
+				</div>
+				<div class="duration">
+					<div class="start-date">
+						<label for="start">Start date*</label>
+						<div class="start-container">
+							<select name="startMonth" class="start-month" id="startMonth">
+								<option value="">Month</option>
+								<option value="01">Jan</option>
+								<option value="02">Feb</option>
+								<option value="03">Mar</option>
+								<option value="04">Apr</option>
+								<option value="05">May</option>
+								<option value="06">Jun</option>
+								<option value="07">Jul</option>
+								<option value="08">Aug</option>
+								<option value="09">Sep</option>
+								<option value="10">Oct</option>
+								<option value="11">Nov</option>
+								<option value="12">Dec</option>
+							</select>
+							<select name="startYear" class="start-year" id="startYear">
+								<option value="2024">2024</option>
+								<option value="2023">2023</option>
+								<option value="2022">2022</option>
+								<option value="2021">2021</option>
+								<option value="2020">2020</option>
+								<option value="2019">2019</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2012">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+							</select>
+						</div>
+					</div>
+					<div class="end-date">
+						<label for="end">End date*</label>
+						<div class="end-container">
+							<select name="endMonth" class="end-month" id="endMonth">
+								<option value="">Month</option>
+								<option value="01">Jan</option>
+								<option value="02">Feb</option>
+								<option value="03">Mar</option>
+								<option value="04">Apr</option>
+								<option value="05">May</option>
+								<option value="06">Jun</option>
+								<option value="07">Jul</option>
+								<option value="08">Aug</option>
+								<option value="09">Sep</option>
+								<option value="10">Oct</option>
+								<option value="11">Nov</option>
+								<option value="12">Dec</option>
+							</select>
+							<select name="endYear" class="end-year" id="endYear">
+								<option value="">Year</option>
+								<option value="2029">2029</option>
+								<option value="2028">2028</option>
+								<option value="2027">2027</option>
+								<option value="2026">2026</option>
+								<option value="2025">2025</option>
+								<option value="2024">2024</option>
+								<option value="2023">2023</option>
+								<option value="2022">2022</option>
+								<option value="2021">2021</option>
+								<option value="2020">2020</option>
+								<option value="2019">2019</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2012">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="choice">
+				<button id="choice-btn">Next: Experience</button>
+			</div>
+		</div>
+
+	</div>
+
+
+
+</body>
+
+</html>
